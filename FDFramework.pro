@@ -31,14 +31,15 @@ FDGL_test.file = ../FDGL/test/FDGL_test.pro
 FDQUI.subdir = ../FDQUI
 FDQUI_test.file = ../FDQUI/test/FDQUI_test.pro
 
-
 FDCore_test.depends = FDCore
 FDSerialize.depends = FDCore
 FDJson.depends = FDCore FDSerialize
-FDJson_test.depends = FDCore FDSerialize FDJSon
+FDJson_test.depends = FDCore FDSerialize
 FDXml.depends = FDCore FDSerialize
 FDXml_test.depends = FDCore FDSerialize FDXml
 FD3D.depends = FDCore
 FD3D_test.depends = FDCore FD3D
 FDGL.depends = FDCore FD3D glad
 FDGL_test.depends = FDCore FD3D glad FDGL
+FDQUI.depends = FDCore FD3D glad FDGL
+FDQUI_test.depends = FDCore FD3D glad FDGL FDQUI
