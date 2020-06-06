@@ -1,0 +1,21 @@
+window_sizes 1853 1145 378 1469 972 120
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128002 // ResourceManagement
+    1469 972 100 A4 0 0
+  classdiagram_ref 128130 // Common
+    120 106 100 A4 0 0
+end
+show_stereotypes
+selected operation_ref 130562 // clearResources
+open
+  attribute_ref 128386 // m_resource
+  attribute_ref 128258 // m_loadStrategy
+  operation_ref 129282 // StrategyResource
+  class_ref 128514 // ResourceManager
+  classdiagram_ref 128130 // Common
+  class_ref 128386 // ContiguousMap
+  state_ref 128002 // FDEngine
+end
+end
+verbose

@@ -40,17 +40,3 @@ FDSerialization.depends = FDScriptingSystems FDMathSystems
 FDScripting.depends = FDScriptingSystems FDMathSystems
 
 FDGameEngineSystems.depends = FDCoreSystems FDMathSystems FDSerialization FDScripting FDRenderingSystems
-
-#FDCorePython.depends = FDCore
-#FDCoreJson.depends = FDCore FDSerializationSystems
-#FD3D.depends = FDCore
-#FD3D_test.depends = FDCore FD3D
-#FD3DXml.depends = FDCore FDSerializationSystems FD3D
-#FD3DJson.depends = FDCore FDSerializationSystems FDCoreJson FD3D FDCoreJson
-#FD3DPython.depends = FD3D
-#FDGL.depends = FDCore FD3D glad
-#FDGL_test.depends = FDCore FD3D glad FDGL
-#FDQUI.depends = FDCore FD3D glad FDGL
-#FDQUI_test.depends = FDCore FD3D glad FDGL FDQUI
-#FDEngine.depends = FDCore FDSerializationSystems glad FD3DJson FD3D FDGL
-#FDEngine_test.depends = FDCore FDSerializationSystems FD3DJson FD3D glad FDGL FDEngine FDScripting FDCorePython FD3DPython
