@@ -37,3 +37,33 @@
 [submodule "FDXml"]
 	path = FDXml
 	url = git@github.com:benjamin-fukdawurld/FDXml.git
+[submodule "thirdparty/llvm"]
+	path = thirdparty/llvm
+	url = https://github.com/llvm/llvm-project.git
+[submodule "thirdparty/boost"]
+	path = thirdparty/boost
+	url = https://github.com/boostorg/boost.git
+[submodule "thirdparty/pybind11"]
+	path = thirdparty/pybind11
+	url = https://github.com/pybind/pybind11.git
+[submodule "thirdparty/rapidjson"]
+	path = thirdparty/rapidjson
+	url = https://github.com/Tencent/rapidjson.git
+[submodule "thirdparty/rapidxml"]
+	path = thirdparty/rapidxml
+	url = https://github.com/discordapp/rapidxml.git
+[submodule "thirdparty/googletest"]
+	path = thirdparty/googletest
+	url = https://github.com/google/googletest.git
+[submodule "thirdparty/glm"]
+	path = thirdparty/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "thirdparty/glad"]
+	path = thirdparty/glad
+	url = https://github.com/benjamin-fukdawurld/glad.git
+[submodule "thirdparty/assimp"]
+	path = thirdparty/assimp
+	url = https://github.com/assimp/assimp.git
+[submodule "thirdparty/stb"]
+	path = thirdparty/stb
+	url = https://github.com/nothings/stb.git
