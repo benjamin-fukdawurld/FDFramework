@@ -1,0 +1,96 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "create build",
+            "type": "shell",
+            "command": "mkdir",
+            "options": {
+                "cwd": "${workspaceFolder}/FDCore"
+            },
+            "args": [
+                "-p",
+                "build"
+            ]
+        },
+        {
+            "label": "configure build",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/FDCore/build"
+            },
+            "args": [
+                ".."
+            ],
+            "dependsOn": [
+                "create build"
+            ]
+        },
+        {
+            "label": "build FDCore",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/FDCore/build"
+            },
+            "args": [
+                "--build",
+                "."
+            ],
+            "dependsOn": [
+                "configure build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "Build",
+            "dependsOn": [
+                "build FDCore"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "install FDCore",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/FDCore/build"
+            },
+            "args": [
+                "install"
+            ],
+            "dependsOn": [
+                "install FDCore"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang build active file",
+            "command": "${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

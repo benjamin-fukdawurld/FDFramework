@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/FD3D/include/**",
+                "${workspaceFolder}/FDCodeAnalyser/include/**",
+                "${workspaceFolder}/FDCore/include/**",
+                "${workspaceFolder}/FDEngine/include/**",
+                "${workspaceFolder}/FDGL/include/**",
+                "${workspaceFolder}/FDJson/include/**",
+                "${workspaceFolder}/FDLua/include/**",
+                "${workspaceFolder}/FDPython/include/**",
+                "${workspaceFolder}/FDSceneGraph/include/**",
+                "${workspaceFolder}/FDScript/include/**",
+                "${workspaceFolder}/FDSerialize/include/**",
+                "${workspaceFolder}/FDXml/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
