@@ -34,6 +34,3 @@
 [submodule "FDScript"]
 	path = FDScript
 	url = git@github.com:benjamin-fukdawurld/FDScript.git
-[submodule "FDXML"]
-	path = FDXML
-	url = git@github.com:benjamin-fukdawurld/FDXML.git
