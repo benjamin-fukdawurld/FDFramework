@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "create build",
+            "label": "create build dir",
             "type": "shell",
             "command": "mkdir",
             "options": {
@@ -21,10 +21,12 @@
                 "cwd": "${workspaceFolder}/FDCore/build"
             },
             "args": [
+                "-DCMAKE_C_COMPILER=${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
+                "-DCMAKE_CXX_COMPILER=${workspaceRoot}/../thirdparty/llvm/build/bin/clang++",
                 ".."
             ],
             "dependsOn": [
-                "create build"
+                "create build dir"
             ]
         },
         {
@@ -36,15 +38,12 @@
             },
             "args": [
                 "--build",
-                "."
+                ".",
+                "-j12"
             ],
             "dependsOn": [
                 "configure build"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            }
+            ]
         },
         {
             "label": "Build",
@@ -70,27 +69,6 @@
             "dependsOn": [
                 "install FDCore"
             ]
-        },
-        {
-            "type": "shell",
-            "label": "C/C++: clang build active file",
-            "command": "${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
         }
     ]
 }

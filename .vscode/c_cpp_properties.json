@@ -14,10 +14,11 @@
                 "${workspaceFolder}/FDSceneGraph/include/**",
                 "${workspaceFolder}/FDScript/include/**",
                 "${workspaceFolder}/FDSerialize/include/**",
-                "${workspaceFolder}/FDXml/include/**"
+                "${workspaceFolder}/FDXml/include/**",
+                "${workspaceFolder}/thirdparty/boost/**"
             ],
             "defines": [],
-            "compilerPath": "${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
+            "compilerPath": "${workspaceRoot}/thirdparty/llvm/build/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64"
