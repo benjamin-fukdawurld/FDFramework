@@ -67,3 +67,6 @@
 [submodule "thirdparty/stb"]
 	path = thirdparty/stb
 	url = https://github.com/nothings/stb.git
+[submodule "FDRenderer"]
+	path = FDRenderer
+	url = git@github.com:benjamin-fukdawurld/FDRenderer.git
