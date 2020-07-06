@@ -1,5 +1,8 @@
 {
     "editor.formatOnSave": true,
+    "terminal.integrated.env.linux": {
+        "PATH": "${workspaceRoot}/thirdparty/depot_tools:${env:PATH}"
+    },
     "clang-format.executable": "${workspaceRoot}/thirdparty/llvm/build/bin/clang-format",
     "clang-tidy.executable": "${workspaceRoot}/thirdparty/llvm/build/bin/clang-tidy",
     "files.exclude": {

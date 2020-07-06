@@ -15,7 +15,8 @@
                 "${workspaceFolder}/FDScript/include/**",
                 "${workspaceFolder}/FDSerialize/include/**",
                 "${workspaceFolder}/FDXml/include/**",
-                "${workspaceFolder}/thirdparty/boost/**"
+                "${workspaceFolder}/thirdparty/boost/**",
+                "${workspaceFolder}/thirdparty/googletest/googletest/include/**"
             ],
             "defines": [],
             "compilerPath": "${workspaceRoot}/thirdparty/llvm/build/bin/clang",
