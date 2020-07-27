@@ -2,11 +2,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "create build dir",
+            "label": "create build directory",
             "type": "shell",
             "command": "mkdir",
             "options": {
-                "cwd": "${workspaceFolder}/FDCore"
+                "cwd": "${workspaceFolder}"
             },
             "args": [
                 "-p",
@@ -18,15 +18,18 @@
             "type": "shell",
             "command": "cmake",
             "options": {
-                "cwd": "${workspaceFolder}/FDCore/build"
+                "cwd": "${workspaceFolder}/build"
             },
             "args": [
-                "-DCMAKE_C_COMPILER=${workspaceRoot}/../thirdparty/llvm/build/bin/clang",
-                "-DCMAKE_CXX_COMPILER=${workspaceRoot}/../thirdparty/llvm/build/bin/clang++",
+                "-DCMAKE_C_COMPILER=${workspaceRoot}/thirdparty/llvm/build/bin/clang",
+                "-DCMAKE_CXX_COMPILER=${workspaceRoot}/thirdparty/llvm/build/bin/clang++",
+                "-DTHIRDPARTY_DIR:PATH=${workspaceRoot}/thirdparty",
+                "-DTHIRDPARTY_BOOST_DIR:PATH=${workspaceRoot}/thirdparty/boost",
+                "-DTHIRDPARTY_GTEST_DIR:PATH=${workspaceRoot}/thirdparty/googletest",
                 ".."
             ],
             "dependsOn": [
-                "create build dir"
+                "create build directory"
             ]
         },
         {
@@ -34,7 +37,23 @@
             "type": "shell",
             "command": "cmake",
             "options": {
-                "cwd": "${workspaceFolder}/FDCore/build"
+                "cwd": "${workspaceFolder}/build/FDCore"
+            },
+            "args": [
+                "--build",
+                ".",
+                "-j12"
+            ],
+            "dependsOn": [
+                "configure build"
+            ]
+        },
+        {
+            "label": "build FDFramework",
+            "type": "shell",
+            "command": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
             },
             "args": [
                 "--build",
@@ -48,7 +67,7 @@
         {
             "label": "Build",
             "dependsOn": [
-                "build FDCore"
+                "build FDFramework"
             ],
             "problemMatcher": [],
             "group": {
@@ -61,13 +80,27 @@
             "type": "shell",
             "command": "make",
             "options": {
-                "cwd": "${workspaceFolder}/FDCore/build"
+                "cwd": "${workspaceFolder}/build/FDCore"
             },
             "args": [
                 "install"
             ],
             "dependsOn": [
-                "install FDCore"
+                "build FDCore"
+            ]
+        },
+        {
+            "label": "install FDFramework",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "args": [
+                "install"
+            ],
+            "dependsOn": [
+                "Build"
             ]
         }
     ]

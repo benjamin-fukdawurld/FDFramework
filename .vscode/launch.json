@@ -8,10 +8,10 @@
             "name": "debug FDCore",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/FDCore/build/FDCore_test",
+            "program": "${workspaceFolder}/build/FDCore/FDCore_test",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/FDCore/build",
+            "cwd": "${workspaceFolder}/build/FDCore",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build FDCore",
+            "preLaunchTask": "build FDFramework",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
