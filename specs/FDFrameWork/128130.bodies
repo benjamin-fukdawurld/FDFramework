@@ -1,3 +1,0 @@
-class AbstractResource
-!!!128514.cpp!!!	getResourceName() : std::string_view
-return m_resourceName;
