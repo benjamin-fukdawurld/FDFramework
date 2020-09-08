@@ -23,6 +23,9 @@
             "args": [
                 "-DCMAKE_C_COMPILER=${workspaceRoot}/thirdparty/llvm/build/bin/clang",
                 "-DCMAKE_CXX_COMPILER=${workspaceRoot}/thirdparty/llvm/build/bin/clang++",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+                "-DINSTALL_GTEST=OFF",
+                "-DBUILD_TESTS=OFF",
                 "-DTHIRDPARTY_DIR:PATH=${workspaceRoot}/thirdparty",
                 "-DTHIRDPARTY_BOOST_DIR:PATH=${workspaceRoot}/thirdparty/boost",
                 "-DTHIRDPARTY_GTEST_DIR:PATH=${workspaceRoot}/thirdparty/googletest",
