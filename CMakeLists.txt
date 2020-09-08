@@ -18,13 +18,16 @@ set(BOOST_LIBRARYDIR ${BOOST_ROOT}/stage)
 set(THIRDPARTY_GTEST_DIR ${THIRDPARTY_DIR}/googletest CACHE PATH
     "path to googletest root directory")
 
-set(THIRDPARTY_GTEST_ROOT ${GTEST_DIR})
+set(THIRDPARTY_GTEST_ROOT ${THIRDPARTY_GTEST_DIR})
 
+option(BUILD_TESTS "Enable build FDCore" ON)
+option(FDCORE_BUILD_TESTS "Build FDCore tests" ${BUILD_TESTS})
 
 option(BUILD_FDCORE "Enable build FDCore" ON)
 if(BUILD_FDCORE)
     add_subdirectory(FDCore)
 endif()
+
 
 #add_library(FDFramework FDFramework.cpp)
 
