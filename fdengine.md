@@ -31,5 +31,45 @@ Some plugin examples:
 * A physics engine
 * Whatever you may want to add as an independent block in the application 🤷 
 
-The plugin API will be defined later in this document but, as a resource the plugin must be initializable, releasable and registrable to events in the application.
+The plugins API will be defined later in this document but, as a resource the plugin must be initializable, releasable and registrable to events in the application.
+
+## Using FDEngine
+
+### Who will use FDEngine ?
+
+FDEngine should be used for both games and developers. Therefore the engine must be embeddable into a game editor software. This editor is an instance of the game engine that uses additional plugins. The editor will help the developers to create and test their games.
+
+### FDEngine use cases
+
+FDEngine must allow a Game application and an Editor application  to lauch a Game.
+
+An editor shall also be able to create, edit, test and debug games
+
+![](.gitbook/assets/fdenginemainusecase.png)
+
+### Launching a game
+
+Launching a game is a set of action that partially depends on the game it self but to schematize lets describe it as following:
+
+1. Initialize the engine with global parametters \(global resources and values, required plugins and their configuration, resource root directory, game entry point, etc.\)
+2. Initialize the plugins and their dependencies
+3. Launch the game from the scenario entry point. 
+
+Once these step are accomplished, the Game will take control on the scenario and the engine will only run as a scheduller.
+
+![](.gitbook/assets/launchgamesequencediagram.png)
+
+### Creating a game
+
+Creating a game is a complex scenario. It consist pretty much on defining the configuration of the game \(the global parametters discussed in **Launching a game** section\) and implementing the scenario. Implementing the scenario means creating the scenes of the game and organize them and there transitions and add the required content to the game.
+
+![](.gitbook/assets/creategamesequencediagram.png)
+
+### Editing a game
+
+Editing a game means editing the configuration or the scenario \(scenes, scenes' transitions and game's resources\)
+
+### Testing and debugging a game
+
+Testing a game means run a test suit on a game. Debugging it means run it with debugging tools to allow the developper to check the state of the game environment during runtime 
 
