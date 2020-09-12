@@ -46,7 +46,7 @@ Most of the FD Projects contains several modules. Each modules **must** be into 
 
 Module folders naming must be in PascalCase, as short as possible and self-descriptive. While naming a module **try not to use accronyms**, if you use them **do not use uppercase notation**. Accronyms must be in PascalCase in order to respect the naming convention and increase readability.
 
-#### An example is worth a thousand word
+> "An **example** is worth a **thousand words**"
 
 In the following examples we will see several situations
 
@@ -67,6 +67,25 @@ In _Example \#1_, at  first sight we are not sure if the accronym is HTTP or HTT
 In _Example \#2_, where does the Accronyms ends ? Some of you might have guessed it on first sight but RGB, CLR and ID mixed altogether with no separator and no case delimitation is really hard to read efficiently. Plus MGT from the previous example and CLR have the same problem. Do not trade readability for lazyness, Color is not that common of an accronym. Prefer using the word rather than non trivial accronyms.
 
 ## Code Structure
+
+Before diving into how to actually write the code let's dicuss about how the code is structured and how the development process should be done. First I would start again with two quotes:
+
+> "Think twice, code once"  
+> "Keep it simple stupid"
+
+Why these two? Aren't they opposed?
+
+They are not! It does not take that much effort to write complicated code that does not perform that much work. Clearly, writting clen code as we have seen previously is an extremely hard task. That being said, as we do not want to rewrite the code many, many, many, many, ..., many times, we need to pay high attention on what we want to acheive and how we are going to acheive it.
+
+_As a developer, as soon as I find a project idea I just dive into the code before thinking about anything else than how to do it in C++. Then when I achieve my short term goal and try to scale up to a larger scope I just crash into the **spagetti** plate where my project ends up being more and more messy. Once you've reached this area, it's **Game Over**. All you have to do is reboot the project and try not to repeat your self into the same situation._
+
+What about the KISS principle ?
+
+As we write the code not to rewrite it once it work, we have to keep in mind that when we will face it again we will not remember why we wrote it the way we did. That means when we will face it again ignoring almost everything about it, **the simpler it will be the easier we will work** with it.
+
+To keep the code as simple as possible we will try to make the compromise between efficiency and readability. Every piece of code has it "target performance" but you cannot know how efficient it is until you've  monitored it. **Do not anticipate** on performances and do not invest into **premature optimizations**. Optimize only when it is **necessary**. Use meaningful names, indent your code properly, do not hesitate to add blank lines to separate things. Templates and metaprogramming must be used very carefully, do not use it if it is not **required**.
+
+ 
 
 
 
