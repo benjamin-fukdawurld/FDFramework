@@ -69,7 +69,9 @@ Creating a game is a complex scenario. It consist pretty much on defining the co
 
 Editing a game means editing the configuration or the scenario \(scenes, scenes' transitions and game's resources\)
 
+![](.gitbook/assets/edigamesequencediagram.png)
+
 ### Testing and debugging a game
 
-Testing a game means run a test suit on a game. Debugging it means run it with debugging tools to allow the developper to check the state of the game environment during runtime 
+Testing a game means run a test suit on a game. Debugging it means run it with debugging tools to allow the developper to check the state of the game environment during runtime. This part will be discussed later but it might not be that relevant to explian because it is more about providing debug executables than implementing features
 
