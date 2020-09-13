@@ -73,3 +73,6 @@
 [submodule "thirdparty/depot_tools"]
 	path = thirdparty/depot_tools
 	url = https://chromium.googlesource.com/chromium/tools/depot_tools
+[submodule "FDProjectUtils"]
+	path = FDProjectUtils
+	url = git@github.com:benjamin-fukdawurld/FDProjectUtils.git
