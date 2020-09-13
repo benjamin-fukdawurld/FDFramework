@@ -85,7 +85,3 @@ As we write the code not to rewrite it once it work, we have to keep in mind tha
 
 To keep the code as simple as possible we will try to make the compromise between efficiency and readability. Every piece of code has it "target performance" but you cannot know how efficient it is until you've  monitored it. **Do not anticipate** on performances and do not invest into **premature optimizations**. Optimize only when it is **necessary**. Use meaningful names, indent your code properly, do not hesitate to add blank lines to separate things. Templates and metaprogramming must be used very carefully, do not use it if it is not **required**.
 
- 
-
-
-
