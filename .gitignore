@@ -54,3 +54,5 @@ compile_commands.json
 # built files
 build/*
 thirdparty/install/*
+tools
+tools/*
