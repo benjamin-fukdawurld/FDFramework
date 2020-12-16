@@ -97,5 +97,6 @@
         "variant": "cpp",
         "*.ipp": "cpp"
     },
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "git.ignoreLimitWarning": true
 }
