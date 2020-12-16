@@ -37,9 +37,12 @@
 [submodule "FDXml"]
 	path = FDXml
 	url = git@github.com:benjamin-fukdawurld/FDXml.git
-[submodule "thirdparty/llvm"]
-	path = thirdparty/llvm
-	url = https://github.com/llvm/llvm-project.git
+[submodule "FDRenderer"]
+	path = FDRenderer
+	url = git@github.com:benjamin-fukdawurld/FDRenderer.git
+[submodule "FDProjectUtils"]
+	path = FDProjectUtils
+	url = git@github.com:benjamin-fukdawurld/FDProjectUtils.git
 [submodule "thirdparty/boost"]
 	path = thirdparty/boost
 	url = https://github.com/boostorg/boost.git
@@ -67,12 +70,3 @@
 [submodule "thirdparty/stb"]
 	path = thirdparty/stb
 	url = https://github.com/nothings/stb.git
-[submodule "FDRenderer"]
-	path = FDRenderer
-	url = git@github.com:benjamin-fukdawurld/FDRenderer.git
-[submodule "thirdparty/depot_tools"]
-	path = thirdparty/depot_tools
-	url = https://chromium.googlesource.com/chromium/tools/depot_tools
-[submodule "FDProjectUtils"]
-	path = FDProjectUtils
-	url = git@github.com:benjamin-fukdawurld/FDProjectUtils.git
