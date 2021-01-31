@@ -28,3 +28,19 @@ if [ ! -f "$STARUML_PATH" ]; then
     wget --output-document="$STARUML_PATH" $STARUML_URL
     chmod +x "$STARUML_PATH"
 fi
+
+git submodule update --init --recursive
+mkdir -p thirdparty/build
+mkdir -p thirdparty/install
+oldpwd=$(pwd)
+cd thirdparty/build
+mkdir googletest
+cd googletest
+cmake -DCMAKE_INSTALL_PREFIX ../../googletest
+cmake --build . --parallel $(nproc)
+cmake --install .
+
+cd $oldpwd
+cd thirdparty/boost
+./bootstrap.sh --prefix=../install
+./b2 install

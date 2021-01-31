@@ -8,7 +8,10 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "args": ["-p", "build"]
+      "args": [
+        "-p",
+        "build"
+      ]
     },
     {
       "label": "configure build",
@@ -23,11 +26,11 @@
         "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
         "-DBUILD_TESTS=ON",
         "-DTHIRDPARTY_DIR:PATH=${workspaceRoot}/thirdparty",
-        "-DTHIRDPARTY_BOOST_DIR:PATH=${workspaceRoot}/thirdparty/install/boost",
-        "-DTHIRDPARTY_GTEST_DIR:PATH=${workspaceRoot}/thirdparty/install/googletest",
         ".."
       ],
-      "dependsOn": ["create build directory"]
+      "dependsOn": [
+        "create build directory"
+      ]
     },
     {
       "label": "build FDCore",
@@ -36,8 +39,14 @@
       "options": {
         "cwd": "${workspaceFolder}/build/FDCore"
       },
-      "args": ["--build", ".", "-j12"],
-      "dependsOn": ["configure build"]
+      "args": [
+        "--build",
+        ".",
+        "-j12"
+      ],
+      "dependsOn": [
+        "configure build"
+      ]
     },
     {
       "label": "build FDFramework",
@@ -46,12 +55,20 @@
       "options": {
         "cwd": "${workspaceFolder}/build"
       },
-      "args": ["--build", ".", "-j12"],
-      "dependsOn": ["configure build"]
+      "args": [
+        "--build",
+        ".",
+        "-j12"
+      ],
+      "dependsOn": [
+        "configure build"
+      ]
     },
     {
       "label": "Build",
-      "dependsOn": ["build FDFramework"],
+      "dependsOn": [
+        "build FDFramework"
+      ],
       "problemMatcher": [],
       "group": {
         "kind": "build",
@@ -65,8 +82,12 @@
       "options": {
         "cwd": "${workspaceFolder}/build/FDCore"
       },
-      "args": ["install"],
-      "dependsOn": ["build FDCore"]
+      "args": [
+        "install"
+      ],
+      "dependsOn": [
+        "build FDCore"
+      ]
     },
     {
       "label": "install FDFramework",
@@ -75,8 +96,12 @@
       "options": {
         "cwd": "${workspaceFolder}/build"
       },
-      "args": ["install"],
-      "dependsOn": ["Build"]
+      "args": [
+        "install"
+      ],
+      "dependsOn": [
+        "Build"
+      ]
     }
   ]
 }

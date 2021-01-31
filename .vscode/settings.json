@@ -1,10 +1,9 @@
 {
     "editor.formatOnSave": true,
+    "clang-tidy.lintOnSave": true,
     "terminal.integrated.env.linux": {
         "PATH": "${workspaceRoot}/thirdparty/depot_tools:${env:PATH}"
     },
-    "clang-format.executable": "${workspaceRoot}/thirdparty/llvm/build/bin/clang-format",
-    "clang-tidy.executable": "${workspaceRoot}/thirdparty/llvm/build/bin/clang-tidy",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -95,7 +94,8 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "cassert": "cpp"
     },
     "cmake.configureOnOpen": true,
     "git.ignoreLimitWarning": true
