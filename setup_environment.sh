@@ -16,7 +16,7 @@ sudo apt-get install -y build-essential g++ cmake
 # Install clang 12
 wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
-sudo ./llvm.sh 12
+sudo ./llvm.sh
 rm llvm.sh
 sudo apt-get install -y clang-format
 
@@ -34,9 +34,9 @@ mkdir -p thirdparty/build
 mkdir -p thirdparty/install
 oldpwd=$(pwd)
 cd thirdparty/build
-mkdir googletest
+[ -d googletest ] ||  mkdir -p googletest
 cd googletest
-cmake -DCMAKE_INSTALL_PREFIX ../../googletest
+cmake ../../googletest -DCMAKE_INSTALL_PREFIX=../../install
 cmake --build . --parallel $(nproc)
 cmake --install .
 
