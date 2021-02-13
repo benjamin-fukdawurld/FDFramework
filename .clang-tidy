@@ -1,5 +1,5 @@
 ---
-Checks:          'clang-diagnostic-*,clang-analyzer-*,clang-diagnostic-*,clang-analyzer-*,-*,clang-analyzer-*,bugprone-*,concurrency-*,cppcoreguidelines-*,-cppcoreguidelines-avoid-non-const-global-variables,performance-*,portability-*,readability-*'
+Checks:          'clang-diagnostic-*,clang-analyzer-*,clang-diagnostic-*,clang-analyzer-*,-*,clang-analyzer-*,bugprone-*,concurrency-*,cppcoreguidelines-*,-cppcoreguidelines-avoid-non-const-global-variables,-cppcoreguidelines-pro-type-static-cast-downcast,performance-*,portability-*,readability-*'
 WarningsAsErrors: ''
 HeaderFilterRegex: ''
 AnalyzeTemporaryDtors: false
